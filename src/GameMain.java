@@ -7,7 +7,7 @@ public class GameMain {
         frame.setSize(900, 700);
 
         PlayField field = new PlayField();
-        frame.add(field);
+        frame.setContentPane(field);
 
         frame.setVisible(true);
     }

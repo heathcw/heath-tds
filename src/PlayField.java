@@ -3,11 +3,16 @@ import java.awt.*;
 
 public class PlayField extends JPanel {
 
-    private final PlayerComponent player;
+    private final PlayerComponent playerComp;
 
     public PlayField() {
-        setLayout(null);
-        this.player = new PlayerComponent(new Player(100, 300, 300));
+        this.playerComp = new PlayerComponent(new Player(100, 300, 300));
+
+        playerComp.setBounds(0,0,30,30);
+        this.add(playerComp);
+
+        playerComp.setFocusable(true);
+        playerComp.requestFocusInWindow();
     }
 
     @Override
@@ -17,13 +22,5 @@ public class PlayField extends JPanel {
         // Background
         g.setColor(Color.GRAY); // dark green
         g.fillRect(0, 0, getWidth(), getHeight());
-
-        draw();
-    }
-
-    private void draw() {
-        this.removeAll();
-        player.setBounds(player.getX(), player.getY(), 10, 10);
-        this.add(player);
     }
 }
