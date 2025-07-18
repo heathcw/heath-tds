@@ -20,7 +20,7 @@ public class PlayerComponent extends JComponent {
         actionMap.put("moveUp", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                thePlayer.updateY(-10);
+                thePlayer.updateY(-5);
                 repaint();
             }
         });
@@ -30,7 +30,7 @@ public class PlayerComponent extends JComponent {
         actionMap.put("moveDown", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                thePlayer.updateY(10);
+                thePlayer.updateY(5);
                 repaint();
             }
         });
@@ -40,7 +40,7 @@ public class PlayerComponent extends JComponent {
         actionMap.put("moveRight", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                thePlayer.updateX(10);
+                thePlayer.updateX(5);
                 repaint();
             }
         });
@@ -50,7 +50,7 @@ public class PlayerComponent extends JComponent {
         actionMap.put("moveLeft", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                thePlayer.updateX(-10);
+                thePlayer.updateX(-5);
                 repaint();
             }
         });
@@ -60,7 +60,7 @@ public class PlayerComponent extends JComponent {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.BLUE);
-        g.fillRect(thePlayer.getX(), thePlayer.getY(), 30, 30);
+        g.fillRect(thePlayer.getX(), thePlayer.getY(), 10, 10);
     }
 
     @Override
