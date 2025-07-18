@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class PlayField extends JPanel {
 
-    private PlayerComponent player;
+    private final PlayerComponent player;
 
     public PlayField() {
         setLayout(null);

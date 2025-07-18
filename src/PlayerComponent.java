@@ -13,15 +13,19 @@ public class PlayerComponent extends JComponent {
             @Override
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyChar() == 'w') {
+                    System.out.println("W pressed");
                     thePlayer.updateX(1);
                 }
                 if (e.getKeyChar() == 's') {
+                    System.out.println("S pressed");
                     thePlayer.updateX(-1);
                 }
                 if (e.getKeyChar() == 'd') {
+                    System.out.println("D pressed");
                     thePlayer.updateY(1);
                 }
                 if (e.getKeyChar() == 'a') {
+                    System.out.println("A pressed");
                     thePlayer.updateX(-1);
                 }
                 revalidate();
