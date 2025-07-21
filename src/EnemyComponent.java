@@ -17,6 +17,6 @@ public class EnemyComponent extends JComponent {
 
     @Override
     public Dimension getPreferredSize() {
-        return new Dimension(600, 600); // Make sure it has size
+        return new Dimension(10, 10); // Make sure it has size
     }
 }

@@ -17,9 +17,10 @@ public class PlayField extends JPanel {
         playerComp.setFocusable(true);
         playerComp.requestFocusInWindow();
 
-        EnemyComponent enemyComp = new EnemyComponent(new Enemy(10, 300, 300));
+        EnemyComponent enemyComp = new EnemyComponent(new Enemy(10, 0, 0));
         enemyComp.setBounds(0, 0, 30, 30);
         this.add(enemyComp);
+        this.setComponentZOrder(enemyComp, 0);
     }
 
     @Override
